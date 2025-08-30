@@ -5,9 +5,24 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
+    <script>
+      // 保存当前URL路径，以便在重定向后恢复
+      sessionStorage.setItem('redirectPath', window.location.pathname + window.location.search);
+      // 重定向到首页，让React Router处理路由
+      window.location.href = '/New-repository/';
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- 备用方案：如果重定向失败，直接加载应用 -->
+    <script type="module">
+      // 如果重定向没有触发，直接加载应用
+      document.addEventListener('DOMContentLoaded', function() {
+        const script = document.createElement('script');
+        script.type = 'module';
+        script.src = '/src/main.jsx';
+        document.body.appendChild(script);
+      });
+    </script>
   </body>
 </html>
