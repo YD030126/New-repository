@@ -1,0 +1,131 @@
+/* 项目实施进展页面样式 */
+.progress-page {
+  width: 100%;
+}
+
+.page-title {
+  margin-bottom: 24px !important;
+  color: #333;
+  font-weight: 600;
+}
+
+/* 搜索卡片样式 */
+.search-card {
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+}
+
+.search-form {
+  width: 100%;
+}
+
+.search-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.add-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 表格卡片样式 */
+.table-card {
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  overflow: hidden;
+}
+
+/* 进度单元格样式 */
+.progress-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-bar {
+  flex: 1;
+  margin: 0;
+}
+
+.progress-text {
+  min-width: 40px;
+  text-align: right;
+  font-weight: 500;
+}
+
+/* 编辑表单样式 */
+.edit-form {
+  width: 100%;
+}
+
+/* 状态标签样式 */
+.status-tag {
+  font-size: 12px;
+  padding: 2px 8px;
+}
+
+/* 图表模态框样式 */
+.chart-modal {
+  width: 80% !important;
+  max-width: 900px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .search-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .add-button-container {
+    justify-content: flex-start;
+    width: 100%;
+  }
+  
+  .progress-cell {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .progress-text {
+    text-align: left;
+  }
+  
+  .progress-page .ant-card-body {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .progress-page {
+    padding: 0;
+  }
+  
+  .page-title {
+    font-size: 18px !important;
+    margin-bottom: 16px !important;
+  }
+  
+  .progress-page .ant-card {
+    margin-bottom: 12px;
+  }
+  
+  .progress-page .ant-card-body {
+    padding: 12px;
+  }
+  
+  .progress-page .ant-form-item-label {
+    padding-bottom: 4px;
+  }
+  
+  .progress-page .ant-btn {
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+}

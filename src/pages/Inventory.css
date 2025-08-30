@@ -1,0 +1,91 @@
+/* 出入库记录页面样式 */
+.inventory-page {
+  width: 100%;
+}
+
+.page-title {
+  margin-bottom: 24px !important;
+  color: #333;
+  font-weight: 600;
+}
+
+/* 搜索卡片样式 */
+.search-card {
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+}
+
+.search-form {
+  width: 100%;
+}
+
+.search-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.add-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 表格卡片样式 */
+.table-card {
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  overflow: hidden;
+}
+
+/* 编辑表单样式 */
+.edit-form {
+  width: 100%;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .search-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .add-button-container {
+    justify-content: flex-start;
+    width: 100%;
+  }
+  
+  .inventory-page .ant-card-body {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .inventory-page {
+    padding: 0;
+  }
+  
+  .page-title {
+    font-size: 18px !important;
+    margin-bottom: 16px !important;
+  }
+  
+  .inventory-page .ant-card {
+    margin-bottom: 12px;
+  }
+  
+  .inventory-page .ant-card-body {
+    padding: 12px;
+  }
+  
+  .inventory-page .ant-form-item-label {
+    padding-bottom: 4px;
+  }
+  
+  .inventory-page .ant-btn {
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+}
